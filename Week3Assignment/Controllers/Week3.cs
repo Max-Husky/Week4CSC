@@ -18,6 +18,8 @@ namespace Week3Assignment.Controllers
                 double sum = 0;
                 List<string> result = new List<string>();
 
+                LogObject(lint);
+
                 lint.OrderBy(a => a).ToList();
 
                 for (int i = 0; i < lint.Count; i++)
@@ -54,6 +56,14 @@ namespace Week3Assignment.Controllers
             }
 
             return Math.Sqrt(stdsum / (count - 1));
+        }
+
+        static void LogObject(List<int> input)
+        {
+            foreach (int i in input)
+            {
+                Console.WriteLine(i.ToString());
+            }
         }
     }
 }
